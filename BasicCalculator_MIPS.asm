@@ -18,6 +18,7 @@ resultLabel:	.asciiz "Result: "
 ###############################
 				.text
 				.globl main
+# Main function
 main:		
 		# Print menu prompt
 		li $v0, 4
@@ -51,6 +52,7 @@ main:
 		li $v0, 10
 		syscall
 
+# Prints message that user entered invalid input for menu option selection
 badInput:
 		# Print bad input message
 		li $v0, 4
