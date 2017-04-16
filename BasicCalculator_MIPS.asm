@@ -11,14 +11,15 @@ exitMsg:	.asciiz "Goodbye!"
 intPrompt:	.asciiz	"Enter an integer: "
 resultLabel:	.asciiz "Result: "
 
-###############################
+######## Register Usage ########
 # $t0 = User's menu selection
 # $t1 = Integer (user input)
 # $t9 = Current result
-###############################
+################################
 		.text
 		.globl main
-# Main function
+		
+###### Main function ######
 main:		
 		# Set current result to 0
 		li $t9, 0
@@ -67,6 +68,7 @@ exit:
 		li $v0, 10
 		syscall
 
+###### FUNCTIONS ######
 # Prints message that user entered invalid input for menu option selection
 badInput:
 		# Print bad input message
